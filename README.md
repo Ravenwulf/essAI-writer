@@ -1,12 +1,10 @@
-# BrAInstormer
-
-App that generates a list of problems with an optional modifier. 
+# essAI-writer
 
 ## Setup
 
 1. If you don’t have Node.js installed, [install it from here](https://nodejs.org/en/)
 
-2. Clone this repository
+2. Clone this repository or install the .zip
 
 3. Navigate into the project directory
 
@@ -14,7 +12,7 @@ App that generates a list of problems with an optional modifier.
    $ cd BrAInstormer
    ```
 
-4. Install the requirements
+4. Install the required dependencies
 
    ```bash
    $ npm install
