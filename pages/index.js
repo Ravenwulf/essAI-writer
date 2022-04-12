@@ -8,6 +8,8 @@ export default function Home() {
 
   async function onSubmit(event) {
     event.preventDefault();
+    setResult("Loading...");
+    console.log(result);
     const response = await fetch("/api/generate", {
       method: "POST",
       headers: {
@@ -23,13 +25,13 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>essAI(y)-writer</title>
+        <title>essAI-writer</title>
         <link rel="icon" href="/Brainstorm.png" />
       </Head>
 
       <main className={styles.main}>
         <img src="/cog.png" className={styles.icon} />
-        <h3>essAI(y)-writer</h3>
+        <h3>essAI-writer</h3>
         <form onSubmit={onSubmit}>
           <input
             type="text"
