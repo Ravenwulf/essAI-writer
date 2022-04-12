@@ -1,20 +1,18 @@
-# BrAInstormer
-
-App that generates a list of problems with an optional modifier. 
+# essAI-writer
 
 ## Setup
 
 1. If you don’t have Node.js installed, [install it from here](https://nodejs.org/en/)
 
-2. Clone this repository
+2. Clone this repository or install the .zip
 
-3. Navigate into the project directory
+3. Navigate into the project directory (or extract from .zip)
 
    ```bash
-   $ cd BrAInstormer
+   $ cd essAI-writer
    ```
 
-4. Install the requirements
+4. Install the required dependencies
 
    ```bash
    $ npm install
@@ -28,7 +26,7 @@ App that generates a list of problems with an optional modifier.
 
 6. Add your [API key](https://beta.openai.com/account/api-keys) to the newly created `.env` file
 
-7. Run the app
+7. Run the `start.bat` file to run the program, or execute the following command in the root directory
 
    ```bash
    $ npm run dev
