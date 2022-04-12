@@ -8,7 +8,7 @@ const openai = new OpenAIApi(configuration);
 export default async function (req, res) {
   const completion = await openai.createCompletion("text-davinci-002", {
     prompt: generatePrompt(req.body.animal),
-    max_tokens: 1000,
+    max_tokens: 2000,
     temperature: 0.4,
     frequency_penalty: 0.5,
     stop:["User:"]
