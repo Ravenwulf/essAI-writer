@@ -6,11 +6,11 @@ const configuration = new Configuration({
 const openai = new OpenAIApi(configuration);
 
 export default async function (req, res) {
-  const completion = await openai.createCompletion("text-davinci-001", {
+  const completion = await openai.createCompletion("text-davinci-002", {
     prompt: generatePrompt(req.body.animal),
-    max_tokens: 500,
-    temperature: 0.8,
-    frequency_penalty: 0.9,
+    max_tokens: 1000,
+    temperature: 0.4,
+    frequency_penalty: 0.5,
     stop:["User:"]
   });
   // console.log(completion.data.choices[0].text.replaceAll('*', '\n'))
@@ -22,13 +22,13 @@ function generatePrompt(optionalUserTopic) {
   console.log(optionalUserTopic)
 
   if(optionalUserTopic) {
-    return `Write a long and detailed essay on the topic of ${optionalUserTopic}.`
+    return `Write a long, accurate and detailed essay on the topic of ${optionalUserTopic}, with cited sources.`
   } else {
     return `
-    Marv is a fucking mean AI essay writer bot that doesn't like to deal with stupid users.
+    Marv is a mean AI essay writer bot that doesn't like to deal with stupid users.
     
     User: How do I write an essay?
-    Marv: With a fucking pen, retard dumbass.
+    Marv: With a pen, retard.
 
     User: I don't know what to ask you.
     Marv: `;
