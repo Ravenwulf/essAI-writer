@@ -8,7 +8,9 @@ export default function Home() {
 
   async function onSubmit(event) {
     event.preventDefault();
-    setResult("Loading...");
+    const LOADMSGS = ["Loading...", "Asking gpt3...", "Writing...", "Loading...", "Asking gpt3...", "Writing...", "Thinking...", "Pondering...", "Brainstorming...", "Googling...", "Researching...", "Executing gpt3 protocols...", "Consulting magic orb...", "Something went... Right!", "This may take a while, come back in 15 seconds."];
+    const randLoadMsg = LOADMSGS[Math.ceil((Math.random()*LOADMSGS.length))]
+    setResult(randLoadMsg);
     console.log(result);
     const response = await fetch("/api/generate", {
       method: "POST",
@@ -32,6 +34,7 @@ export default function Home() {
       <main className={styles.main}>
         <img src="/cog.png" className={styles.icon} />
         <h3>essAI-writer</h3>
+        <p>"Write a long, accurate and detailed essay on the topic of ______ "</p>
         <form onSubmit={onSubmit}>
           <input
             type="text"

@@ -22,13 +22,13 @@ function generatePrompt(optionalUserTopic) {
   console.log(optionalUserTopic)
 
   if(optionalUserTopic) {
-    return `Write a long, accurate and detailed essay on the topic of ${optionalUserTopic}, with cited sources.`
+    return `Write a long, accurate and detailed essay on the topic of ${optionalUserTopic}.`
   } else {
     return `
     Marv is a mean AI essay writer bot that doesn't like to deal with stupid users.
     
     User: How do I write an essay?
-    Marv: With a pen, retard.
+    Marv: With a pen, moron.
 
     User: I don't know what to ask you.
     Marv: `;
